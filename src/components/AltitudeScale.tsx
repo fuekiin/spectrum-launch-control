@@ -11,7 +11,7 @@ import { useTheme } from "styled-components";
  * @param value - The current altitude value of the vehicle.
  * @returns A SVG representation of the altitude scale with dynamic animations.
  */
-const AltitudeScale = ({ value }: { value: number }) => {
+const AltitudeScale = ({ value }: { value?: number }) => {
   // Define opacity thresholds for different altitude levels
   const FLOOR_HEIGHT_OPACITY_THRESHOLD = 0.2;
   const FIRST_HEIGHT_OPACITY_THRESHOLD = 0.5;

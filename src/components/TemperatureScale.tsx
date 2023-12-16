@@ -12,7 +12,7 @@ import { useTheme } from "styled-components";
  * @param value - The current temperature value of the vehicle.
  * @returns A SVG representation of the temperature scale with dynamic animations.
  */
-const TemperatureScale = ({ value }: { value: number }) => {
+const TemperatureScale = ({ value }: { value?: number }) => {
   const theme = useTheme();
 
   // Fetch normalized value, danger, and warning states based on vehicle temperature
@@ -29,7 +29,7 @@ const TemperatureScale = ({ value }: { value: number }) => {
     () => ({
       x: normalizedValue * 500, // Adjust this calculation as needed
     }),
-    [normalizedValue, color],
+    [normalizedValue],
   );
 
   // Animation for the background elements based on the color state
@@ -37,7 +37,7 @@ const TemperatureScale = ({ value }: { value: number }) => {
     () => ({
       stroke: color,
     }),
-    [normalizedValue, color],
+    [color],
   );
 
   return (

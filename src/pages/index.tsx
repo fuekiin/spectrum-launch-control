@@ -26,19 +26,19 @@ const Home = () => {
           title="Velocity"
           value={data?.velocity ?? 0}
           unit="m/s"
-          visualization={<VelocityScale value={data?.velocity ?? 0} />}
+          visualization={<VelocityScale value={data?.velocity} />}
         />
         <WidgetCard
           title="Temperature"
           value={data?.temperature ?? 0}
           unit="°C"
-          visualization={<TemperatureScale value={data?.temperature ?? 0} />}
+          visualization={<TemperatureScale value={data?.temperature} />}
         />
         <WidgetCard
           title="Altitude"
           value={data?.altitude ?? 0}
           unit="m"
-          visualization={<AltitudeScale value={data?.altitude ?? 0} />}
+          visualization={<AltitudeScale value={data?.altitude} />}
         />
       </MainGrid>
 

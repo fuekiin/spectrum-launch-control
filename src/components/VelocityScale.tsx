@@ -12,7 +12,7 @@ import { useTheme } from "styled-components";
  * @param value - The current velocity value of the vehicle.
  * @returns A SVG representation of the velocity scale with dynamic animations.
  */
-const VelocityScale = ({ value }: { value: number }) => {
+const VelocityScale = ({ value }: { value?: number }) => {
   const theme = useTheme();
 
   // Fetch normalized value, danger, and warning states based on vehicle velocity

@@ -38,16 +38,17 @@ const getNormalizedValue = (
  */
 export const useVehicleValue = ({
   config,
-  value,
+  value: passedValue,
 }: {
   config: VehicleValueConfig;
-  value: number;
+  value?: number;
 }) => {
   const [normalizedValue, setNormalizedValue] = useState<number>(0);
   const [isInWarning, setIsInWarning] = useState<boolean>(false);
   const [isInDanger, setIsInDanger] = useState<boolean>(false);
 
   useEffect(() => {
+    const value = passedValue ?? config.expectedMin;
     const normalized = getNormalizedValue(value, config);
     setNormalizedValue(normalized);
 
@@ -65,7 +66,7 @@ export const useVehicleValue = ({
         (config.dangerMaxThreshold !== undefined &&
           value >= config.dangerMaxThreshold),
     );
-  }, [config, value]);
+  }, [config, passedValue]);
 
   return { normalizedValue, isInWarning, isInDanger };
 };
