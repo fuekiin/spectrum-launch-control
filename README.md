@@ -4,6 +4,10 @@
 
 This project is a Next.js application developed as part of a technical assessment for a position at Isar Aerospace. It is designed to visualize various parameters of the "Spectrum" launch vehicle, providing real-time insights into the vehicle's velocity, altitude, temperature, and other critical metrics through an intuitive and interactive UI.
 
+## Live Preview
+
+The latest version of this application can be previewed [here](https://spectrum-launch-control.vercel.app).
+
 ## Features
 
 - **Real-Time Data Visualization:** View the current state of the Spectrum vehicle, including velocity, altitude, and temperature.
