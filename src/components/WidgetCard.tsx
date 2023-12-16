@@ -72,12 +72,12 @@ const WidgetValue = styled.p`
  */
 export const WidgetCard = ({
   title,
-  value,
+  value = 0,
   unit,
   visualization,
 }: {
   title: string;
-  value: number;
+  value?: number;
   unit: string;
   visualization: ReactNode;
 }) => {
