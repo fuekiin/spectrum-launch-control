@@ -23,6 +23,10 @@ This project is a Next.js application developed as part of a technical assessmen
 
 The vehicle's parameters can be configured in `vehicleConfig` located in the `config/` directory. This file allows setting expected and projected ranges for various metrics like velocity, altitude, and temperature. It enables easy adjustments to thresholds for warnings and danger alerts.
 
+### Note on Altitude Configuration
+
+As a developer, I encountered some uncertainties regarding the exact behavior of the 'altitude' parameter. Consequently, I'm not entirely sure if the current setup in `vehicleConfig` is perfectly accurate. However, the altitude configuration can be easily adjusted using the `altitude` properties in `vehicleConfig` to better match the expected behavior of the Spectrum vehicle.
+
 ## Using SWR for Data Fetching
 
 SWR (stale-while-revalidate) is used for data fetching due to its several benefits:

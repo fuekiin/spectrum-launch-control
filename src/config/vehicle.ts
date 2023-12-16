@@ -34,7 +34,7 @@ export const vehicleConfig: VehicleConfig = {
   },
   altitude: {
     expectedMin: 0,
-    expectedMax: 100,
+    expectedMax: -80000,
 
     projectedMin: 0,
     projectedMax: 1,

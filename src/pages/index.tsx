@@ -37,7 +37,7 @@ const Home = () => {
         <WidgetCard
           title="Altitude"
           value={data?.altitude ?? 0}
-          unit="km"
+          unit="m"
           visualization={<AltitudeScale value={data?.altitude ?? 0} />}
         />
       </MainGrid>
