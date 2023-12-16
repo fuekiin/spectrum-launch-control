@@ -32,6 +32,8 @@ As a developer, I encountered some uncertainties regarding the exact behavior of
 SWR (stale-while-revalidate) is used for data fetching due to its several benefits:
 
 - **Real-Time Updates:** SWR provides automatic revalidation of data, ensuring the vehicle's data is always up-to-date.
+- **Automatic Revalidation on Focus:** One of the key features of SWR is its ability to automatically revalidate data when a user focuses on the application (e.g., switching tabs in a browser). This means that the data visualization remains current without any manual intervention, which is particularly useful for ensuring the most recent data is always displayed.
+- **Interval-Based Revalidation:** Besides the default focus-based revalidation, SWR also supports interval-based revalidation. This can be particularly advantageous over traditional polling because it combines the efficiency of the stale-while-revalidate strategy with the consistency of periodic updates. By setting an interval, you can ensure that data is periodically fetched and updated, but unlike standard polling, SWR will still leverage its cache-first strategy. This reduces the number of redundant network requests, lowering the load on both the client and server, and improves the overall efficiency of the application.
 - **Caching and Performance:** Efficient caching strategy to reduce unnecessary network requests, improving performance.
 - **Error Handling and Retry:** Built-in error handling and retry logic for a more resilient data fetching process.
 - **Suspense and Loading States:** Supports React Suspense and handles loading states gracefully.
