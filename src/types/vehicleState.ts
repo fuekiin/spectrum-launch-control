@@ -9,10 +9,10 @@
  * @property isActionRequired - A boolean indicating whether some action is required for the vehicle.
  */
 export type VehicleState = {
-  velocity: number;
-  altitude: number;
-  temperature: number;
-  statusMessage: string;
-  isAscending: boolean;
-  isActionRequired: boolean;
+  Velocity: number;
+  Altitude: number;
+  Temperature: number;
+  StatusMessage: string;
+  IsAscending: boolean;
+  IsActionRequired: boolean;
 };

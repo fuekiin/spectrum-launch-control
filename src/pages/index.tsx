@@ -14,23 +14,10 @@ import { Status } from "@/components/Status";
 import { DottedBg } from "@/components/DottedBg";
 import TemperatureScale from "@/components/TemperatureScale";
 import AltitudeScale from "@/components/AltitudeScale";
-import { RefreshButton } from "@/components/RefreshButton";
 import { ErrorMessage } from "@/components/ErrorMessage";
 
 const Home = () => {
-  const { data, isLoading, error, refresh } = useVehicleState();
-
-  /**
-   * Renders loading state.
-   */
-  if (isLoading) {
-    return (
-      <MainContainer>
-        <DottedBg />
-        <ErrorMessage>Loading...</ErrorMessage>
-      </MainContainer>
-    );
-  }
+  const { data, error } = useVehicleState();
 
   /**
    * Renders error state with a message.
@@ -50,29 +37,27 @@ const Home = () => {
   return (
     <MainContainer>
       <DottedBg />
-      <Status>{data?.statusMessage ?? "-"}</Status>
+      <Status>{data?.StatusMessage ?? "-"}</Status>
       <MainGrid>
         <WidgetCard
           title="Velocity"
-          value={data?.velocity}
+          value={data?.Velocity}
           unit="m/s"
-          visualization={<VelocityScale value={data?.velocity} />}
+          visualization={<VelocityScale value={data?.Velocity} />}
         />
         <WidgetCard
           title="Temperature"
-          value={data?.temperature}
+          value={data?.Temperature}
           unit="°C"
-          visualization={<TemperatureScale value={data?.temperature} />}
+          visualization={<TemperatureScale value={data?.Temperature} />}
         />
         <WidgetCard
           title="Altitude"
-          value={data?.altitude}
+          value={data?.Altitude}
           unit="m"
-          visualization={<AltitudeScale value={data?.altitude} />}
+          visualization={<AltitudeScale value={data?.Altitude} />}
         />
       </MainGrid>
-
-      <RefreshButton onClick={refresh}>Refresh</RefreshButton>
     </MainContainer>
   );
 };
