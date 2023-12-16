@@ -1,22 +1,52 @@
-// "use client";
+/**
+ * Home Component
+ *
+ * Displays the main dashboard for vehicle state monitoring.
+ * It uses the `useVehicleState` hook to fetch and display data such as velocity, temperature, and altitude.
+ * In case of loading or error states, appropriate messages are displayed.
+ */
 import { WidgetCard } from "@/components/WidgetCard";
 import { MainGrid } from "@/components/MainGrid";
 import VelocityScale from "@/components/VelocityScale";
 import { useVehicleState } from "@/hooks/useVehicleState";
 import { MainContainer } from "@/components/MainContainer";
 import { Status } from "@/components/Status";
-import { useEffect, useState } from "react";
 import { DottedBg } from "@/components/DottedBg";
 import TemperatureScale from "@/components/TemperatureScale";
 import AltitudeScale from "@/components/AltitudeScale";
 import { RefreshButton } from "@/components/RefreshButton";
+import { ErrorMessage } from "@/components/ErrorMessage";
 
 const Home = () => {
   const { data, isLoading, error, refresh } = useVehicleState();
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error occurred {JSON.stringify(data)}</div>;
+  /**
+   * Renders loading state.
+   */
+  if (isLoading) {
+    return (
+      <MainContainer>
+        <DottedBg />
+        <ErrorMessage>Loading...</ErrorMessage>
+      </MainContainer>
+    );
+  }
 
+  /**
+   * Renders error state with a message.
+   */
+  if (error) {
+    return (
+      <MainContainer>
+        <DottedBg />
+        <ErrorMessage>Error occurred {JSON.stringify(data)}</ErrorMessage>
+      </MainContainer>
+    );
+  }
+
+  /**
+   * Renders the main content of the Home component including status, main grid, and refresh button.
+   */
   return (
     <MainContainer>
       <DottedBg />
