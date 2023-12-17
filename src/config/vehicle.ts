@@ -21,29 +21,41 @@ import { VehicleConfig } from "@/types/vehicleConfig";
  *   Similar properties as velocity, but specific to temperature measurements.
  */
 export const vehicleConfig: VehicleConfig = {
-  velocity: {
-    expectedMin: -100,
-    expectedMax: 100,
-    warningMinThreshold: -80,
-    warningMaxThreshold: 75,
-    dangerMinThreshold: -95,
-    dangerMaxThreshold: 85,
-
-    projectedMin: -1,
-    projectedMax: 1,
+  vehicle: {
+    name: "Spectrum",
+    payload: "-",
+    version: "0.0.1",
+    engine: "LZ-4",
   },
-  altitude: {
-    expectedMin: 0,
-    expectedMax: -80000,
+  sensors: {
+    velocity: {
+      expectedMin: -100,
+      expectedMax: 100,
+      warningMinThreshold: -80,
+      warningMaxThreshold: 75,
+      dangerMinThreshold: -95,
+      dangerMaxThreshold: 85,
 
-    projectedMin: 0,
-    projectedMax: 1,
-  },
-  temperature: {
-    expectedMin: -30,
-    expectedMax: 30,
+      projectedMin: -1,
+      projectedMax: 1,
+    },
+    altitude: {
+      expectedMin: 0,
+      expectedMax: -80000,
 
-    projectedMin: -1,
-    projectedMax: 1,
+      projectedMin: 0,
+      projectedMax: 1,
+    },
+    temperature: {
+      expectedMin: -30,
+      expectedMax: 30,
+      warningMinThreshold: -20,
+      warningMaxThreshold: 25,
+      dangerMinThreshold: -25,
+      dangerMaxThreshold: 27,
+
+      projectedMin: -1,
+      projectedMax: 1,
+    },
   },
 };

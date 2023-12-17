@@ -17,7 +17,7 @@ const VelocityScale = ({ value }: { value?: number }) => {
 
   // Fetch normalized value, danger, and warning states based on vehicle velocity
   const { normalizedValue, isInDanger, isInWarning } = useVehicleValue({
-    config: vehicleConfig.velocity,
+    config: vehicleConfig.sensors.velocity,
     value,
   });
 

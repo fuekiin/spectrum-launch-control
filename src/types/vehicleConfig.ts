@@ -1,3 +1,16 @@
+export type VehicleDetailConfig = {
+  name: string;
+  payload: string;
+  version: string;
+  engine: string;
+};
+
+export type VehicleSensorsConfig = {
+  velocity: VehicleValueConfig;
+  altitude: VehicleValueConfig;
+  temperature: VehicleValueConfig;
+};
+
 /**
  * Type definition for configuring vehicle value normalization and thresholds.
  *
@@ -30,7 +43,6 @@ export type VehicleValueConfig = {
  * @property temperature - Configuration for the vehicle's temperature.
  */
 export type VehicleConfig = {
-  velocity: VehicleValueConfig;
-  altitude: VehicleValueConfig;
-  temperature: VehicleValueConfig;
+  vehicle: VehicleDetailConfig;
+  sensors: VehicleSensorsConfig;
 };

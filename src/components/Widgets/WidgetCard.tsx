@@ -38,7 +38,7 @@ const WidgetCardTitle = styled.h2`
 /**
  * Styled area for the widget visualization. It is designed to contain custom visualization components like graphs or scales.
  */
-const WidgetVisualizationArea = styled.div`
+export const WidgetVisualizationArea = styled.div`
   padding-left: ${({ theme }) => theme.sizes.cardPadding};
   padding-right: ${({ theme }) => theme.sizes.cardPadding};
   padding-top: ${({ theme }) => theme.sizes.cardPadding};
@@ -62,7 +62,7 @@ const WidgetInputArea = styled.div`
 /**
  * Styled component for displaying the widget value. It presents the main numerical value of the widget.
  */
-const WidgetValue = styled.p`
+export const WidgetValue = styled.p`
   font-size: 24px;
   font-weight: 800;
   color: ${({ theme }) => theme.colors.baseSecondary};

@@ -17,7 +17,7 @@ const TemperatureScale = ({ value }: { value?: number }) => {
 
   // Fetch normalized value, danger, and warning states based on vehicle temperature
   const { normalizedValue, isInDanger, isInWarning } = useVehicleValue({
-    config: vehicleConfig.temperature,
+    config: vehicleConfig.sensors.temperature,
     value,
   });
 

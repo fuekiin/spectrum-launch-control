@@ -17,6 +17,7 @@ import DottedBg from "@/components/MainLayout/DottedBg";
 import ErrorMessage from "@/components/MainLayout/ErrorMessage";
 import MainGrid from "@/components/MainLayout/MainGrid";
 import Status from "@/components/MainLayout/Status";
+import VehicleInfoWidget from "@/components/Widgets/VehicleInfoWidget/VehicleInfoWidget";
 
 const Home = () => {
   const { data, error } = useVehicleState();
@@ -41,6 +42,7 @@ const Home = () => {
       <DottedBg inErrorState={data?.IsActionRequired} />
       <Status>{data?.StatusMessage ?? "-"}</Status>
       <MainGrid>
+        <VehicleInfoWidget />
         <ActOnSpectrumWidget isActionRequired={data?.IsActionRequired} />
         <VelocityWidget velocity={data?.Velocity} />
         <TemperatureWidget temperature={data?.Temperature} />

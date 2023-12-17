@@ -24,7 +24,7 @@ const AltitudeScale = ({ value }: { value?: number }) => {
 
   // Fetch normalized value, danger and warning states based on vehicle altitude
   const { normalizedValue, isInDanger, isInWarning } = useVehicleValue({
-    config: vehicleConfig.altitude,
+    config: vehicleConfig.sensors.altitude,
     value,
   });
 
