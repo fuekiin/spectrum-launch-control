@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  /* html, */
   body {
     color: ${({ theme }) => theme.colors.basePrimary};
     background: ${({ theme }) => theme.colors.backgroundMain};

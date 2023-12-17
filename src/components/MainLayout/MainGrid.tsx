@@ -5,7 +5,7 @@ import styled from "styled-components";
  * This component creates a responsive grid layout that automatically adjusts the number of columns
  * based on the available width while maintaining a consistent row height.
  */
-export const MainGrid = styled.div`
+const MainGrid = styled.div`
   flex: 1;
   display: grid;
   grid-auto-rows: 280px;
@@ -13,4 +13,7 @@ export const MainGrid = styled.div`
   grid-gap: ${({ theme }) => theme.sizes.gap};
   align-items: center;
   justify-content: center;
+  gap: 16px;
 `;
+
+export default MainGrid;

@@ -5,7 +5,7 @@
 //   return <Component {...pageProps} />;
 // }
 
-import GlobalStyle from "@/components/GlobalStyle";
+import GlobalStyle from "@/components/MainLayout/GlobalStyle";
 import { theme } from "@/config/theme";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "styled-components";
