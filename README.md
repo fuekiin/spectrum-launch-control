@@ -17,7 +17,7 @@ The latest version of this application can be previewed [here](https://spectrum-
 
 ## Project Structure
 
-- `components/`: Contains reusable UI components like `WidgetCard`, `VelocityScale`, etc., for visualizing vehicle data.
+- `components/`: Contains reusable UI components like the `Widgets`, `Button`, etc., for visualizing vehicle data.
 - `config/`: Includes configuration files such as `vehicleConfig` for setting up vehicle parameters.
 - `hooks/`: Custom React hooks like `useVehicleValue` and `useVehicleValueColor` for fetching and interpreting vehicle data.
 - `types/`: Type definitions used across the application.
