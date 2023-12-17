@@ -58,6 +58,28 @@ Framer Motion is a powerful library for React that simplifies complex animations
 
 While SVGs and Framer Motion provide a strong foundation for building beautiful and interactive visualizations, it's important to note that this approach might have limitations as the frontend scales. Particularly for applications requiring a vast number of dynamic elements or complex interactivity, alternative methods or additional optimizations may be necessary to maintain performance and scalability.
 
+## Environment Configuration
+
+To successfully run API queries within the application, specific environment variables need to be set. These variables allow the application to connect to the appropriate API endpoints for fetching vehicle data.
+
+### Required Environment Variables:
+
+- **`NEXT_PUBLIC_API_BASE_WS_URL` (Vehicle WebSocket API URL):** This variable specifies the base URL for the WebSocket connection. It is used by the `useSWRSubscription` hook for subscribing to real-time updates from the Spectrum vehicle via WebSocket.
+
+- **`NEXT_PUBLIC_API_BASE_URL` (Vehicle REST API URL):** This variable sets the base URL for REST API queries. It's essential for endpoints where REST API calls are made, allowing the application to fetch and send data to the Spectrum vehicle's backend services.
+
+### Setting up Local Environment Variables:
+
+1. Create a file named `.env.local` in the root of your project.
+2. Add the environment variables with their respective URLs:
+   ```
+   NEXT_PUBLIC_API_BASE_WS_URL=your_vehicle_ws_api_url_here
+   NEXT_PUBLIC_API_BASE_URL=your_vehicle_api_url_here
+   ```
+3. Save the file and restart your development server. The application will now use these URLs for API connections.
+
+Ensure that these environment variables are correctly set to allow the application to communicate with the Spectrum vehicle's data sources and services.
+
 ## Running the Project
 
 1. Clone the repository.
