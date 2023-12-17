@@ -18,6 +18,7 @@ import ErrorMessage from "@/components/MainLayout/ErrorMessage";
 import MainGrid from "@/components/MainLayout/MainGrid";
 import Status from "@/components/MainLayout/Status";
 import VehicleInfoWidget from "@/components/Widgets/VehicleInfoWidget/VehicleInfoWidget";
+import { WidgetVisualizationPlaceholderCard } from "@/components/Widgets/WidgetPlaceholders/WidgetPlaceholders";
 
 const Home = () => {
   const { data, error } = useVehicleState();
@@ -43,13 +44,17 @@ const Home = () => {
       <Status>{data?.StatusMessage ?? "-"}</Status>
       <MainGrid>
         <VehicleInfoWidget />
+        <TemperatureWidget temperature={data?.Temperature} />
         <ActOnSpectrumWidget isActionRequired={data?.IsActionRequired} />
         <VelocityWidget velocity={data?.Velocity} />
-        <TemperatureWidget temperature={data?.Temperature} />
+        <WidgetVisualizationPlaceholderCard title={"Lorem"} />
+        <WidgetVisualizationPlaceholderCard title={"Ipsum"} />
         <AltitudeWidget altitude={data?.Altitude} />
+        <WidgetVisualizationPlaceholderCard title={"Dolor"} />
+        <WidgetVisualizationPlaceholderCard title={"Sit Amet"} />
+        <WidgetVisualizationPlaceholderCard title={"Consectetur"} />
       </MainGrid>
     </MainContainer>
-    // </>
   );
 };
 
