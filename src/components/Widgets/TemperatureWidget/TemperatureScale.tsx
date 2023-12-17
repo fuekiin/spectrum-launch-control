@@ -46,21 +46,21 @@ const TemperatureScale = ({ value }: { value?: number }) => {
         id="helper"
         fill="none"
         stroke={theme.colors.backgroundVisualization}
-        stroke-width="5"
+        strokeWidth="5"
         d="M 0 180 L 1000 180"
       />
       <path
         id="path1"
         fill="none"
         stroke={theme.colors.backgroundVisualization}
-        stroke-width="5"
+        strokeWidth="5"
         d="M 0 320 L 1000 320"
       />
       <motion.path
         id="bgright"
         fill="none"
         stroke={theme.colors.backgroundVisualization}
-        stroke-width="70"
+        strokeWidth="70"
         d="M 510 250 L 1000 250"
         animate={bgAnimation}
       />
@@ -68,7 +68,7 @@ const TemperatureScale = ({ value }: { value?: number }) => {
         id="bgleft"
         fill="none"
         stroke={theme.colors.backgroundVisualization}
-        stroke-width="70"
+        strokeWidth="70"
         d="M 0 250 L 490 250"
         animate={bgAnimation}
       />
@@ -76,7 +76,7 @@ const TemperatureScale = ({ value }: { value?: number }) => {
         id="scale"
         fill="none"
         stroke="#ffffff"
-        stroke-width="10"
+        strokeWidth="10"
         d="M 500 175 L 500 325"
         animate={scaleAnimation}
       />

@@ -115,8 +115,8 @@ const AltitudeScale = ({ value }: { value?: number }) => {
         <path
           id="earth"
           fill={theme.colors.backgroundVisualizationHighlight}
-          fill-opacity="0.4"
-          fill-rule="evenodd"
+          fillOpacity="0.4"
+          fillRule="evenodd"
           stroke="none"
           d="M 599.5 465 C 599.5 409.771545 554.728455 365 499.5 365 C 444.271515 365 399.5 409.771545 399.5 465 C 399.5 520.228455 444.271515 565 499.5 565 C 554.728455 565 599.5 520.228455 599.5 465 Z"
         />
@@ -124,7 +124,7 @@ const AltitudeScale = ({ value }: { value?: number }) => {
           id="firstheight"
           fill="none"
           stroke={theme.colors.backgroundVisualizationHighlight}
-          stroke-width="5"
+          strokeWidth="5"
           d="M 699.5 465 C 699.5 354.54306 609.956909 265 499.5 265 C 389.04306 265 299.5 354.54306 299.5 465 C 299.5 575.45697 389.04306 665 499.5 665 C 609.956909 665 699.5 575.45697 699.5 465 Z"
           animate={firstHeightAnimation}
         />
@@ -132,7 +132,7 @@ const AltitudeScale = ({ value }: { value?: number }) => {
           id="secondheight"
           fill="none"
           stroke={theme.colors.backgroundVisualizationHighlight}
-          stroke-width="5"
+          strokeWidth="5"
           d="M 799.5 465 C 799.5 299.314575 665.185425 165 499.5 165 C 333.814575 165 199.5 299.314575 199.5 465 C 199.5 630.685425 333.814575 765 499.5 765 C 665.185425 765 799.5 630.685425 799.5 465 Z"
           animate={secondHeightAnimation}
         />
@@ -140,13 +140,13 @@ const AltitudeScale = ({ value }: { value?: number }) => {
           id="thirdheight"
           fill="none"
           stroke={theme.colors.backgroundVisualizationHighlight}
-          stroke-width="5"
+          strokeWidth="5"
           d="M 899.5 465 C 899.5 244.086121 720.413879 65 499.5 65 C 278.586121 65 99.5 244.086121 99.5 465 C 99.5 685.913879 278.586121 865 499.5 865 C 720.413879 865 899.5 685.913879 899.5 465 Z"
           animate={thirdHeightAnimation}
         />
         <motion.path
           id="Vehicle"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           stroke="none"
           d="M 496 363 L 497 363 L 496 365 L 498 365 L 500 365 L 499 363 L 500 363 L 501 363 L 500 365 L 502 365 L 504 365 L 503 363 L 504 363 L 504 321 L 500 315 L 496 321 Z"
           animate={vehicleAnimation}
