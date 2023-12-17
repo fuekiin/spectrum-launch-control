@@ -31,16 +31,16 @@ The vehicle's parameters can be configured in `vehicleConfig` located in the `co
 
 As a developer, I encountered some uncertainties regarding the exact behavior of the 'altitude' parameter. Consequently, I'm not entirely sure if the current setup in `vehicleConfig` is perfectly accurate. However, the altitude configuration can be easily adjusted using the `altitude` properties in `vehicleConfig` to better match the expected behavior of the Spectrum vehicle.
 
-## Using SWR for Data Fetching
+## Using SWR for Data Fetching with WebSocket
 
-SWR (stale-while-revalidate) is used for data fetching due to its several benefits:
+In the latest iteration, we've upgraded our data fetching strategy by integrating `useSWRSubscription` from SWR, shifting our focus to real-time data through WebSocket connections. This approach ensures that we receive instant updates about the Spectrum vehicle's status, directly streamed from the server.
 
-- **Real-Time Updates:** SWR provides automatic revalidation of data, ensuring the vehicle's data is always up-to-date.
-- **Automatic Revalidation on Focus:** One of the key features of SWR is its ability to automatically revalidate data when a user focuses on the application (e.g., switching tabs in a browser). This means that the data visualization remains current without any manual intervention, which is particularly useful for ensuring the most recent data is always displayed.
-- **Interval-Based Revalidation:** Besides the default focus-based revalidation, SWR also supports interval-based revalidation. This can be particularly advantageous over traditional polling because it combines the efficiency of the stale-while-revalidate strategy with the consistency of periodic updates. By setting an interval, you can ensure that data is periodically fetched and updated, but unlike standard polling, SWR will still leverage its cache-first strategy. This reduces the number of redundant network requests, lowering the load on both the client and server, and improves the overall efficiency of the application.
-- **Caching and Performance:** Efficient caching strategy to reduce unnecessary network requests, improving performance.
-- **Error Handling and Retry:** Built-in error handling and retry logic for a more resilient data fetching process.
-- **Suspense and Loading States:** Supports React Suspense and handles loading states gracefully.
+### Key Advantages of `useSWRSubscription` with WebSocket:
+
+- **Real-Time Data Updates:** The WebSocket connection provides immediate data updates, allowing us to visualize the vehicle's status as it happens.
+- **Efficient Data Management:** `useSWRSubscription` manages the incoming data stream and errors, ensuring the data displayed is always current and reliable.
+- **Deduplication of Subscriptions:** The hook deduplicates subscriptions using the same key, reducing network traffic and server load. It maintains a single subscription per key, shared across multiple components.
+- **Seamless Error Handling:** The hook handles any errors during the subscription, resetting the error status upon the receipt of new data.
 
 ## Visualizations Using SVGs and Framer Motion
 
