@@ -89,7 +89,23 @@ Ensure that these environment variables are correctly set to allow the applicati
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Potential API Improvements
+# Recruiting specific section
+
+## Recruiting Assignments
+
+The project includes various assignments, each tagged with a specific version in the GitHub repository. The commit associated with each tag contains the code relevant to that particular assignment.
+
+### Accessing Assignments:
+
+- **Assignment A:** For details and the codebase related to Assignment A, visit [Assignment A Tag](https://github.com/fuekiin/spectrum-launch-control/releases/tag/assignments%2Fa).
+
+- **Assignment B:** For details and the codebase related to Assignment B, visit [Assignment B Tag](https://github.com/fuekiin/spectrum-launch-control/releases/tag/assignments%2Fb).
+
+- **Assignment C:** For details and the codebase related to Assignment C. The potential API improvements for Assignment C can be found in the README section titled [Potential API Improvements](https://github.com/fuekiin/spectrum-launch-control#potential-api-improvements).
+
+These tags help in navigating through different phases of the project and understanding the progress and modifications made during each assignment.
+
+## Assignment C: Potential API Improvements
 
 During my work with the provided API, I have identified some areas for potential improvements:
 
