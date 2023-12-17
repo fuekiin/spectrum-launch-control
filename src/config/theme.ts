@@ -28,6 +28,7 @@ export const theme: DefaultTheme = {
 
     backgroundCard: "#020202",
     backgroundMain: "#060606",
+    backgroundBottom: "#090909",
     backgroundLine: "#1C1C1C",
     backgroundVisualization: "#1C1C1C",
     backgroundVisualizationHighlight: "#2b2b2b",
