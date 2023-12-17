@@ -66,3 +66,23 @@ While SVGs and Framer Motion provide a strong foundation for building beautiful 
 4. Open `http://localhost:3000` to view the application.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Potential API Improvements
+
+During my work with the provided API, I have identified some areas for potential improvements:
+
+### GET Request on ActOnSpectrum Endpoint
+
+It seems unusual that the `ActOnSpectrum` endpoint only accepts a GET request. In this scenario, where an action is expected to alter the state of the vehicle, one would typically anticipate the endpoint to accept a PATCH or POST request. My tests have consistently shown that only a GET request returns a 200 status, while other methods like POST or PATCH result in a 405 error. This behavior deviates from standard RESTful practices where state-changing actions should ideally use POST or PATCH for better clarity and adherence to standards.
+
+### Inconsistency in Property Naming Between REST API and WebSocket
+
+There is a noticeable inconsistency in the naming convention of properties returned by the REST API and WebSocket. In the REST API responses, properties are in lowercase, whereas, in the WebSocket responses, they are capitalized. A consistent naming convention across both REST API and WebSocket would be expected to avoid confusion.
+
+### Provision of API Documentation
+
+An obvious non-technical improvement would be to provide comprehensive API documentation. This would make working with the API more efficient and help clarify certain values and their behaviors for those unfamiliar with spaceflight terminology and operations, such as the behavior of the 'altitude' property.
+
+### Data Realism in Simulation
+
+Another valuable enhancement would be to ensure that the simulated data closely mirrors the expected real-world data. This would allow for more accurate visualization and testing.
